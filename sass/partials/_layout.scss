@@ -1,0 +1,89 @@
+//
+// General layout rules
+//
+
+.wrapper{
+    @include outer-container;
+}
+
+header{
+    @include span-columns(12);
+}
+
+section{
+    @include span-columns(12);
+    padding: 0 3%;
+}
+
+.product-img, .product-info{
+    @include span-columns(5 of 12);
+    @include omega();
+    margin: 18px 4%;
+}
+
+
+.product-description-info{
+    @include span-columns(7 of 12);
+}
+
+.product-comment{
+    @include span-columns(5 of 12);
+}
+
+.product-description{
+    @include span-columns(10);
+    @include omega();
+    margin: 18px 4%;
+}
+
+.related-list{
+    li{
+        @include span-columns(4);
+        @include omega();
+    }
+}
+
+.product-img-list{
+    li{
+        display: inline-block;
+        float: left;
+    }
+}
+
+.related{
+    @include shift(1);
+}
+.review-fav{
+    padding: 0;
+    li{
+        display: inline-block;
+        float: left;
+    }
+}
+
+.reviews{
+    @include span-columns(10);
+    @include shift(1);
+}
+
+.review-user{
+    @include span-columns(3 of 12);
+    display: inline-block;
+}
+
+.review-comment{
+    @include span-columns(9 of 12);
+    @include omega();
+    p{
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+    }
+}
+
+.review-user, .review-comment{
+    h3{
+        margin-bottom: 5px;
+    }
+}
